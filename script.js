@@ -184,12 +184,12 @@ const predict = () => {
       e.preventDefault();
       const data = {
         "key": '2012-10-06 12:10:20.0000001',
+        "pickup_datetime": `${document.getElementById('pickup_datetime').value} UTC`,
         "pickup_latitude": parseFloat(document.getElementById('pickup_latitude').value) || 40.747,
         "pickup_longitude": parseFloat(document.getElementById('pickup_longitude').value) || -73.989,
         "dropoff_latitude": parseFloat(document.getElementById('dropoff_latitude').value) || 40.802,
         "dropoff_longitude": parseFloat(document.getElementById('dropoff_longitude').value) || -73.956,
-        "passenger_count": parseInt(document.getElementById('passenger_count').value) || 2,
-        "pickup_datetime": `${document.getElementById('pickup_datetime').value} UTC`
+        "passenger_count": parseInt(document.getElementById('passenger_count').value) || 2
       };
       let query = []
       Object.keys(data).forEach((param) => {
